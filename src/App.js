@@ -7,7 +7,12 @@ var emojiDictionary = {
   "🤑": "Money-Mouth Face",
   "😑": "Expressionless Face",
   "😕": "Confused Face",
-  "😟": "Worried Face"
+  "😟": "Worried Face",
+  "🤗": "Hugging Face",
+  "😉": "Winking Face",
+  "😋": "Face Savoring Food",
+  "😇": "Smiling Face with Halo",
+  "🤐": "Zipper-Mouth Face"
 };
 
 var emojiArray = Object.keys(emojiDictionary);
