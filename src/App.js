@@ -19,9 +19,11 @@ var emojiArray = Object.keys(emojiDictionary);
 
 export default function App() {
   var [meaning, setMeaning] = useState("");
+  var [emojiInput, setEmojiInput] = useState("");
 
   function emojiInputHandler(event) {
     var emojiInput = event.target.value;
+    setEmojiInput(emojiInput);
     var meaning = emojiDictionary[emojiInput];
     if (emojiInput in emojiDictionary) {
       setMeaning(meaning);
@@ -35,6 +37,7 @@ export default function App() {
   }
 
   function emojiClickHandler(emoji) {
+    setEmojiInput("");
     var meaning = emojiDictionary[emoji];
     setMeaning(meaning);
   }
@@ -62,7 +65,8 @@ export default function App() {
           height: "7vh",
           border: "1px solid black"
         }}
-      ></input>
+        value={emojiInput}
+      />
 
       <div
         style={{ paddingTop: "1rem", fontWeight: "bold", fontSize: "larger" }}
